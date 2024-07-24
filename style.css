@@ -6,10 +6,23 @@ span {
     color: red;
 }
 
+html {
+    font-size: 25px;
+}
+
 body {
     color: rgb(63, 63, 63);
     background-color: rgba(209, 186, 141, 0.2);
     margin: 0; /*フッターの左右に隙間ができたため */
+    font-size: 0.08rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 header {
@@ -33,6 +46,7 @@ header img {
 
 header span {
     color: white;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -51,6 +65,8 @@ header span {
 }
 
 #intro {
+    display: flex;
+    flex-direction: column;
     width: 90%;
     margin: auto;
     background-color: rgba(209, 186, 141, 0.2);
@@ -84,11 +100,14 @@ h2 {
     background-color: rgba(255,255,255,0.7);
     box-shadow: 10px 10px 10px gray;
     border-radius: 10px;
+    flex-direction: row; /* 横並び */
+    justify-content: space-around;
 }
 
 .box_l,.box_r {
-    width: 50%;
+    /* width: 50%; */
     padding: 20px;
+    flex: 1;
 }
 
 .box_l img {
@@ -133,4 +152,22 @@ footer {
 
 .swiper-pagination-bullet-active {
     background-color: orange !important; 
+}
+
+
+/* メディアクエリ：画面幅が600px未満の場合、縦並び */
+@media (min-width: 375px) and (max-width: 980px) {
+    html {
+        font-size: 40px;
+    }
+
+    header span {
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+    }    
+
+    .item_box {
+        flex-direction: column; /* 縦並び */
+    }
 }

@@ -5,3 +5,132 @@ h1 {
 span {
     color: red;
 }
+
+body {
+    color: rgb(63, 63, 63);
+    background-color: rgba(209, 186, 141, 0.2);
+    margin: 0; /*フッターの左右に隙間ができたため */
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(209, 186, 141, 0.8);
+    box-shadow: 0 5px 5px gray;
+    justify-content: center; /* 水平方向に中央配置 */
+    align-items: center;     /* 垂直方向に中央配置 */
+    letter-spacing: 5px; /* 文字間のスペースを2ピクセルに設定 */
+}
+
+header img {
+    height: 60px;
+}
+
+header span {
+    color: white;
+    font-weight: bold;
+}
+
+#top {
+    width: 100%;
+}
+
+#bg img {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+}
+
+#intro {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(209, 186, 141, 0.2);
+    padding: 20px;
+}
+
+h2 {
+    border-left: 10px solid rgb(209, 186, 141);
+    padding-left: 10px;
+}
+
+.intro_img_box {
+    display: flex;
+    padding: 10px;
+    width: 70%;
+}
+
+.intro_img_box img{
+    width: 100%;
+}
+
+
+#main {
+    width: 90%;
+    margin: auto;
+}
+
+.item_box {
+    display: flex;
+    margin: 10px;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 10px;
+}
+
+.box_l,.box_r {
+    width: 50%;
+    padding: 20px;
+}
+
+.box_l img {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(209, 186, 141, 0.8);
+    justify-content: center; /* 水平方向に中央配置 */
+    align-items: center;     /* 垂直方向に中央配置 */
+    letter-spacing: 5px; /* 文字間のスペースを2ピクセルに設定 */
+    color: white;
+    font-weight: bold;
+}
+
+/* スライドショー */
+.swiper {
+    width: 900px;
+    height: 360px;
+    margin: 80px auto;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: orange !important; 
+}
+
+.swiper-pagination-bullet-active {
+    background-color: orange !important; 
+}

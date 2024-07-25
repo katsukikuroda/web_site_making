@@ -3,14 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>sample</title>
-    <!-- ↓フォント変更　これ追加 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-    <!-- ↑ -->
-    <!-- ↓アイコン　これ追加 -->
-    <link href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" rel="stylesheet">
-    <!-- ↑ -->
     <style>
         .sampletext {
             height: 500px;
@@ -19,52 +11,10 @@
             width: 100px;
             height: 100px;
             background: #000;
-            /* ↓ホバー２　これ追加 */
-            transition: all 0.3s 0s ease;
-            /* ↑ */        
         }        
-        /* ↓フォント変更　これ追加 */
-        body {
-            font-family: "Rampart One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        /* ↑ */
-        /* ↓ホバー１　これ追加 */
-        .box:hover {
-            background-color: #CCC;
-            width: 300px;
-        }
-        /* ↑ */
-        /* ↓クラスの付け外し　これ追加 */
-        .active {
-            transform: translateX(300px);
-            background: #ff0000;
-        }
-        /* ↑ */
-        /* ↓スクロールトリガー　これ追加 */
-        .js-trigger__wrapper {
-            height: 200vh;
-        }
-
-        .js-trigger {
-            margin-top: 600px;
-            height: 300px;
-            background-color: #eee;
-        }
-        .js-demo-section {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: red;
-        }
-        /* ↑ */        
     </style>
 </head>
 <body>
-    <!-- ↓アイコン　これ追加 -->
-    <i class="fa-solid fa-dragon"></i>
-    <!-- ↑ -->
     <div class="sampletext"><h1>sample text</h1></div>
     <div class="sampletext"><h2>サンプル　テキスト</h2></div>
     <div class="sampletext"><p>酸腐留　敵酢途</p></div>
@@ -75,28 +25,7 @@
             <div class="js-demo-section"></div>
         </div>
     </section>
-    <!-- ↓スクロールトリガー　これ追加 -->
-    <script src="gsap.min.js"></script>
-    <script src="ScrollTrigger.min.js"></script>    
-    <!-- ↑ -->
     <script>
-        // ↓クラスの付け外し　これ追加
-        const box = document.getElementById("box");
-        const button = document.getElementById("button");
-
-        button.addEventListener("click", () => {
-            box.classList.toggle("active");
-        });        
-        // ↑
-        // ↓スクロールトリガー　これ追加
-        gsap.to(".js-demo-section", { // アニメーションしたい要素を指定
-            x: 800, // 横に 800px 動かす
-            scrollTrigger: {
-                trigger: ".js-trigger",// アニメーションが始まるトリガーとなる要素
-                start: "top center", // アニメーションが始まる位置を指定
-            }
-        });        
-        // ↑
     </script>
 </body>
 </html>

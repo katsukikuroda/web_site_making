@@ -5,13 +5,24 @@
 
 /* ヘッダー用CSS */
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     height: 48px;
     padding: 16px 24px;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000000;
+    box-shadow: 10px 5px 8px rgba(57, 78, 83, 0.8);
 }
 
-header nav{
+header:hover {
+    background-color: rgba(67, 76, 95, 0.9);
+    transition: all 1.3s ease 0s;
+}
+
+header:hover{
     display: flex;
     margin: 0 0 0 auto;
 }
@@ -22,7 +33,7 @@ header span{
     font-size: 24px;
     line-height: 48px;
     text-align: center;
-    color: #fff;
+    color: #a4a9c6;
 }
 
 header nav a{
@@ -36,13 +47,47 @@ header nav a{
 
 
 /* スライドショー用CSS */
+
+.swiper {
+
+    width: 900px;
+    height: 600px;
+}
+
 .swiper-slide {
     width: 100%;
     height: 100%;
+    margin: 100px auto;
 }
 
 .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.koumoku{
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+
+.head{
+    width: 900px;
+    height: 600px;
+}
+
+
+img{
+    width: 475px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+.contry{
+    font-size: 45px;
 }

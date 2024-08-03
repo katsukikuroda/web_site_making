@@ -1,10 +1,6 @@
-.dummy {
-    height: 1000px;
-}
-
 /* ↓これ追加 */
 body{
-    margin-top: 80px;
+    margin-top: 250px;
 }
 /* ↑ */
 
